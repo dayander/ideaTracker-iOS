@@ -7,6 +7,7 @@
 //
 
 import UIKit
+     
 
 
 
@@ -15,12 +16,7 @@ class AllIdeasViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    
-    
 
-    
-    
-    
     
     var ideasList: [Idea] = []
     let queryService = QueryService()
@@ -57,6 +53,10 @@ class AllIdeasViewController: UIViewController {
     }
 
     
+    @IBAction func addIdeaModalPush(_ sender: Any) {
+        
+        performSegue(withIdentifier: "addIdea", sender: nil )
+    }
 }
 
 // MARK: - UITableView
@@ -65,7 +65,7 @@ extension AllIdeasViewController: UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("table view one")
+        
         return ideasList.count
     }
     
@@ -85,8 +85,51 @@ extension AllIdeasViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
         return 62.0
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        //let row = indexPath.row
+        
+         let idea = ideasList[indexPath.row]
+        self.performSegue(withIdentifier: "ideaCellToFullIdea", sender: idea )
+
+
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender:
+        Any?) {
+        
+        if segue.identifier == "ideaCellToFullIdea"{
+        let idea = sender as! Idea
+        let detailView = segue.destination as! DetailedIdeaViewController
+        detailView.ideaQuickTitle          =   idea.quickTitle
+        
+        
+        detailView.ideaDescription = idea.description
+//        detailView!.quickTitleTextEdit = idea.quickTitle
+        
+        
+    }
+    }
+//        if sender === forgotPasswordButton{
+//            segue.destination.navigationItem.title = "Forgot Password"
+//
+//        }else if sender === forgotUsernameButton{
+//            segue.destination.navigationItem.title = "Forgot Username"
+//
+//        }else{
+//            segue.destination.navigationItem.title = userNameField.text
+//        }
+    
+//    func tableView(_ tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath) {
+//        let cell = tableView.cellForRowAtIndexPath(indexPath)
+//        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+//
+//        performSegueWithIdentifier("ideaCellToFullIdea", sender: cell)
+//    }
     
     // When user taps cell, play the local file, if it's downloaded
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		121A917A21922F3C00A681CE /* AllIdeasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A6467421812D3900DA075A /* AllIdeasViewController.swift */; };
+		1237A4C4219328BB002B7B39 /* DetailedIdeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1237A4C3219328BB002B7B39 /* DetailedIdeaViewController.swift */; };
+		1273F62E21967B7B00F5AD15 /* AddIdeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1273F62D21967B7B00F5AD15 /* AddIdeaViewController.swift */; };
 		12A6467321812D3900DA075A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A6467221812D3900DA075A /* AppDelegate.swift */; };
 		12A6467521812D3900DA075A /* AllIdeasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A6467421812D3900DA075A /* AllIdeasViewController.swift */; };
 		12A6467821812D3900DA075A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12A6467621812D3900DA075A /* Main.storyboard */; };
@@ -37,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1237A4C3219328BB002B7B39 /* DetailedIdeaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedIdeaViewController.swift; sourceTree = "<group>"; };
+		1273F62D21967B7B00F5AD15 /* AddIdeaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIdeaViewController.swift; sourceTree = "<group>"; };
 		12A6466F21812D3900DA075A /* ideaTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ideaTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12A6467221812D3900DA075A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12A6467421812D3900DA075A /* AllIdeasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllIdeasViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				12A6467421812D3900DA075A /* AllIdeasViewController.swift */,
+				1237A4C3219328BB002B7B39 /* DetailedIdeaViewController.swift */,
+				1273F62D21967B7B00F5AD15 /* AddIdeaViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -305,11 +312,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1237A4C4219328BB002B7B39 /* DetailedIdeaViewController.swift in Sources */,
 				12A6467521812D3900DA075A /* AllIdeasViewController.swift in Sources */,
 				12A6467321812D3900DA075A /* AppDelegate.swift in Sources */,
 				12A646AA21837AAF00DA075A /* ideaCell.swift in Sources */,
 				12A646A62182334600DA075A /* Idea.swift in Sources */,
 				12A646A821828D3E00DA075A /* ideaQueryService.swift in Sources */,
+				1273F62E21967B7B00F5AD15 /* AddIdeaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				12A6468821812D3A00DA075A /* ideaTrackerTests.swift in Sources */,
+				121A917A21922F3C00A681CE /* AllIdeasViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

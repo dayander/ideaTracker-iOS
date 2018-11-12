@@ -48,6 +48,7 @@ class IdeaCell: UITableViewCell {
 //    }
 //
     func configure(idea: Idea) {
+        
         quickTitleLabel.text = idea.quickTitle
         //descriptionLabel.text = idea.description
         
